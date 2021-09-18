@@ -21,9 +21,12 @@ public class Person {
         return age;
     }
 
-    public void setAge(Byte age) {
-        while(age < 0)
+    public void setAge(byte age) {
+        if(age < 0) {
             System.out.println("Invalid age number where age is less than 0");
+            System.out.println("The age will be set to 0 until any change");
+            this.age=0;
+        }
         this.age = age;
     }
 
